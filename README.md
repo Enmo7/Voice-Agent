@@ -224,6 +224,9 @@ pip install sentence-transformers faiss-cpu
 - Consider upgrading to paid tier
 
 ---
+<img width="1512" height="347" alt="livekit" src="https://github.com/user-attachments/assets/2e7be557-679e-4eee-a2e0-927f2baf402a" />
+<img width="1552" height="386" alt="livekit 2" src="https://github.com/user-attachments/assets/6934b9a1-df62-4f59-aaeb-85d9c6bb66f5" />
+<img width="1505" height="381" alt="livekit 1" src="https://github.com/user-attachments/assets/5760315f-edbf-4d18-a608-04a7deee38c2" />
 
 ## 📚 Additional Resources
 
