@@ -253,6 +253,7 @@ This project is provided as-is for educational and demonstration purposes.
 ## 🎉 Next Steps
 
 - **Enhance RAG:** Add PDF/document processing
+- **Database Integration:** Connect to SQL/NoSQL databases
 - **Multi-language Support:** Add translation capabilities
 - **Authentication:** Implement user authentication
 - **Conversation History:** Store and retrieve past conversations
