@@ -15,28 +15,30 @@ class RAGEngine:
         self._load_and_index(knowledge_file)
 
     def _load_and_index(self, filepath):
-        if not os.path.exists(filepath):
-            print(f"Warning: {filepath} not found. RAG will be empty.")
-            return
+        try:
+            if not os.path.exists(filepath):
+                print(f"Warning: {filepath} not found. RAG will be empty.")
+                return
 
-        with open(filepath, 'r', encoding='utf-8') as f:
-            text = f.read()
+            with open(filepath, 'r', encoding='utf-8') as f:
+                text = f.read()
 
-        # Split text into chunks (paragraphs separated by double newlines)
-        # You can improve this logic for better segmentation
-        self.chunks = [chunk.strip() for chunk in text.split('\n\n') if chunk.strip()]
-        
-        if not self.chunks:
-            return
+            self.chunks = [chunk.strip() for chunk in text.split('\n\n') if chunk.strip()]
+            
+            if not self.chunks:
+                print("Warning: No chunks found in knowledge base.")
+                return
 
-        # Convert text chunks to vector embeddings
-        embeddings = self.encoder.encode(self.chunks)
-        
-        # Create the FAISS vector database
-        dimension = embeddings.shape[1]
-        self.index = faiss.IndexFlatL2(dimension)
-        self.index.add(np.array(embeddings).astype('float32'))
-        print(f"RAG Engine Ready: Indexed {len(self.chunks)} chunks.")
+            embeddings = self.encoder.encode(self.chunks)
+            dimension = embeddings.shape[1]
+            self.index = faiss.IndexFlatL2(dimension)
+            self.index.add(np.array(embeddings).astype('float32'))
+            print(f"RAG Engine Ready: Indexed {len(self.chunks)} chunks.")
+            
+        except Exception as e:
+            print(f"Error loading knowledge base: {e}")
+            self.chunks = []
+            self.index = None
 
     def search(self, query, top_k=3):
         if not self.index or not self.chunks:
