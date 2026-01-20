@@ -1,0 +1,9 @@
+TechNova Solutions is a software company founded in 2020 by Sarah Connor. We specialize in building AI-powered voice agents for customer support. Our headquarters is located in Cairo, Egypt.
+
+Our operating hours are from Monday to Friday, 9:00 AM to 5:00 PM Eastern European Time. We are closed on weekends and national holidays.
+
+The pricing for our "Standard Voice Plan" starts at $500 per month, which includes 10,000 minutes of voice processing. The "Enterprise Plan" is custom-priced and includes unlimited minutes and dedicated support.
+
+Our refund policy allows customers to request a full refund within the first 14 days of service if they are not satisfied. After 14 days, no refunds are issued.
+
+To contact support, you can email us at support@technova.example.com or call our hotline at +20-123-456-7890.
