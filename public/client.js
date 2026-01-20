@@ -49,7 +49,7 @@ async function connectToRoom() {
         await room.connect(data.url, data.token);
         
         // 5. Enable the user's microphone
-        await room.localParticipant.setMicrophoneEnabled(true);
+        console.log("Active Microphone:", room.localParticipant.activeDeviceMap.get('audioinput'));
 
         updateUI(true);
 
